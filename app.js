@@ -103,3 +103,43 @@
 
 // let b = 5;
 // console.log(--b);  Output: 4 (pehle kam kiya phir print)
+
+// The value is used first, then increased.
+// var x = 5;
+// console.log(x++);
+// console.log(x);
+
+// var a = 8;
+// console.log(a--);
+// console.log(a);
+
+// var b = 5;
+// console.log(--b);
+
+// var resultOfComputation = (2 * 4) * (4 + 2);;
+// console.log(resultOfComputation)
+// output 48
+
+// alert("2 plus 2 equals " + 2 + 2);
+
+// Concatenating text strings
+// var firstName = "Maham";
+// var secondName = "Kanwal";
+// var fullName = firstName + " " + secondName;
+// var fullName = `${firstName} ${secondName}`;
+// alert(fullName);
+
+// alert("Thanks, " + "Susan" + "!");
+
+// var message = "Thanks, ";
+// var userName = "Maham";
+// var banger = "!";
+// var customMessage = `${message} ${userName}${banger}`;
+// var customMessage = message + userName + banger;
+// alert(customMessage);
+
+// Prompts
+// prompt("Your message here");
+
+// var userName = prompt("What is your name?");
+// console.log("Hello, " + userName + "!");
