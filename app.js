@@ -143,3 +143,40 @@
 
 // var userName = prompt("What is your name?");
 // console.log("Hello, " + userName + "!");
+
+// For loops
+// let i = 1;  Initialization
+// i <= 5;   Condition
+// i++; Updation
+// Iteration ka matlab hota hai loop ka ek chakkar.
+
+// for (let i = 1; i <= 5; i++) {
+//   console.log("Number:",i);
+// }
+
+// for (let i = 2; i <= 10; i+=2) {
+//   console.log(i);
+// }
+
+// let fruits = ["apple","mango","banana"]
+// for (i=0; i<fruits.length; i++){
+//     console.log(fruits[i])
+// }
+
+// While loops
+// Use:while loop ka istemal tab kiya jata hai jab hamein koi kaam baar baar karna ho jab tak koi shart (condition) true ho.
+// Yeh har dafa loop chalanay se pehle condition ko check karta hai.
+
+// let i = 0;
+// while (i <= 5 ){
+//     console.log(i);
+//     i++;
+// }
+
+// Explanation
+// i = 1 se start hota hai.
+// Jab tak i <= 5 hai, tab tak loop chalega.
+// Har dafa loop ke andar console.log(i) print karega.
+// Phir i++ se i ki value barh jaye gi.
+// Jab i ki value 6 ho jaye gi, condition false ho jaye gi aur loop ruk jaye ga.
+
