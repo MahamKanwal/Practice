@@ -165,14 +165,12 @@
 
 // While loops
 // Use:while loop ka istemal tab kiya jata hai jab hamein koi kaam baar baar karna ho jab tak koi shart (condition) true ho.
-// Yeh har dafa loop chalanay se pehle condition ko check karta hai.
-
+// Yeh har dafa loop chalanay se pehle condition ko check karta hai.`
 // let i = 0;
 // while (i <= 5 ){
 //     console.log(i);
 //     i++;
 // }
-
 // Explanation
 // i = 1 se start hota hai.
 // Jab tak i <= 5 hai, tab tak loop chalega.
