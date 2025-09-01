@@ -150,12 +150,8 @@
 // i++; Updation
 // Iteration ka matlab hota hai loop ka ek chakkar.
 
-// for (let i = 1; i <= 5; i++) {
-//   console.log("Number:",i);
-// }
-
-// for (let i = 2; i <= 10; i+=2) {
-//   console.log(i);
+// for (let i = 1; i <= 5; i++){
+//     console.log("Nuber:",i)
 // }
 
 // let fruits = ["apple","mango","banana"]
@@ -171,6 +167,13 @@
 //     console.log(i);
 //     i++;
 // }
+
+// let i = 0;
+// while (i <= 5){
+//     console.log(i);
+//     i++;
+// }
+
 // Explanation
 // i = 1 se start hota hai.
 // Jab tak i <= 5 hai, tab tak loop chalega.
