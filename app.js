@@ -181,3 +181,30 @@
 // Phir i++ se i ki value barh jaye gi.
 // Jab i ki value 6 ho jaye gi, condition false ho jaye gi aur loop ruk jaye ga.
 
+// let computerGuess = Math.floor(Math.random() * 10);
+// console.log(computerGuess);
+// let userGuess = prompt("enter a number from 0 to 10");
+// let tries = 1;
+
+// while (userGuess != computerGuess){
+//     userGuess = prompt("try again");
+//     tries++;
+// }
+// console.log(`you are win computer guess is ${computerGuess} you win in ${tries} tries`);
+
+// const num1 = 10;
+// const num2 = 40;
+// const num3 = 90;
+
+// if(num1 > num2 && num1 > num3){
+//     console.log("num1 is greatest",num1)
+// }
+// else if(num2 > num1 && num2 > num3){
+//     console.log("num2 is greatest",num2)
+// }
+// else{
+//     console.log("num3 is greatest",num3)
+// }
+
+
+
