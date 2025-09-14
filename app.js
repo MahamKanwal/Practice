@@ -206,5 +206,141 @@
 //     console.log("num3 is greatest",num3)
 // }
 
+// var:
+// Scoping: var is function-scoped or globally-scoped. This means a variable declared with var is accessible throughout the entire function in which it's declared, or if declared outside any function, it's accessible globally. It does not respect block scope (like code within {}).
+// Reassignment: Variables declared with var can be reassigned to new values.
+// Redeclaration: Variables declared with var can be redeclared within the same scope without causing an error.
+//const exampleVar = () => {
+//    if(true){
+//      var x = 10;
+//     console.log(x);
+//    }
+//    console.log(x);
+// }
+// exampleVar();
+// var y = 5;
+// var y = 20;
+// console.log(y);
 
+// let:
+// Scoping: let is block-scoped. This means a variable declared with let is only accessible within the block of code (e.g., an if statement, a for loop, or a function) where it's declared.
+// Reassignment: Variables declared with let can be reassigned to new values.
+// Redeclaration: Variables declared with let cannot be redeclared within the same scope.
+// const exampleLet = () => {
+//     if(true){
+//         let z = 20;
+//         console.log(z);
+//     }
+//         console.log(z);
+// }
+// exampleLet();
+// let a = 5;
+// a = 10;
+// console.log(a);
 
+// const
+// Scoping: const is also block-scoped, just like let.
+// Reassignment: Variables declared with const cannot be reassigned to new values after they have been initialized. They must be assigned a value when declared.
+// Redeclaration: Variables declared with const cannot be redeclared within the same scope.
+// Immutability: It's important to note that const does not make the value itself immutable, but rather the binding to that value. For objects and arrays, the properties or elements can still be modified.
+
+// const exampleConst = () => {
+//     if(true){
+//         const PI = 3.14159;
+//         console.log(PI);
+//     }
+// }
+// exampleConst();
+// const maxUsers = 100;
+// maxUsers = 150;
+// const maxUsers = 200;
+// console.log(maxUsers);
+
+// const person = { name : "Alice"};
+// person.name = "Bob";
+// console.log(person.name);
+
+// Closure
+// 🔸 Definition (Simple Words)
+// 👉 Closure ek aisa function hai jo apne parent (outer) function ke variables ko yaad rakhta hai
+// — chahe parent function ka execution khatam bhi kyon na ho gaya ho.
+// const outer = () => {
+//     let counter = 0;
+//     const inner = () => {
+//         counter++;
+//        console.log(counter);
+//     }
+//     return inner;
+// }
+// const myCounter = outer();
+//  myCounter();
+// console.log(myCounter());
+// console.log(myCounter());
+// console.log(myCounter());
+
+// const bankAccount = () => {
+//     let balance = 1000;
+//     return{
+//         deposit: (amount) => {
+//     balance += amount;
+//     console.log(`Deposited: ${amount}, New Balance: ${balance}`);
+//         },
+//         checkBalance: () => {
+//             console.log(`Current Balance: ${balance}`);
+//         }
+//     };
+// }
+// const myAccount = bankAccount();
+// myAccount.deposit(1500);
+// myAccount.checkBalance();
+
+// Where Closures are Used?
+// Data privacy (private variables banane ke liye).
+// Functions ko yaad karwana (like counters, timers).
+// Callbacks / Event listeners me.
+
+// Ek function banao jo counter return kare. Har bar call karne par value +1 ho jaye.
+// const createCounter = () => {
+//     let count = 0;
+//     const inner = () => {
+//         count++;
+//         console.log(count);
+//     }
+// return inner;
+// }
+// const counter = createCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// const multiplier = (fixed) => {
+//     return (num) => {
+//         return num * fixed;
+//     };
+// }
+// const multiplyBy2 = multiplier(2);
+// console.log(multiplyBy2(5));
+// console.log(multiplyBy2(10));
+
+// function multiplier(fixed) {
+//     return function(num){
+//         return num * fixed;
+//     };
+// }
+
+// const multiplyBy2 = multiplier(2);
+// console.log(multiplyBy2(5));
+// console.log(multiplyBy2(10));
+
+// const multiplyBy3= multiplier(3);
+// console.log(multiplyBy3(10));
+// console.log(multiplyBy3(5));
+
+// const outerFunction = (outerVar) => {
+//     return function innerFunction (innerVar){
+//     console.log(`Outer variable:, ${outerVar}`);
+//     console.log(`Inner variable:, ${innerVar}`);
+//     };
+// }
+// const newFunc = outerFunction(`Hello from outside!`);
+// newFunc(`Hello from inside!`);
