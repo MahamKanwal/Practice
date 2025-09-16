@@ -382,9 +382,44 @@
 // console.log(area);
 // console.log(city);
 
-const car = {
-    brand : "Toyota",
-    model : "Corolla"
-};
-let { barnd: carBrand, model: carModel} = car;
-console.log()
+// const car = {
+//     brand: "Toyota",
+//     model: "Corolla"
+// }
+// let {brand: carBrand, model: carModel} = car;
+// console.log(carBrand);
+// console.log(carModel);
+
+// const user = {userName: "Ali"};
+// let { userName, role = "guest" } = user;
+// console.log(userName);
+// console.log(role);
+
+// const student = {
+//     name: "Maham",
+//     marks: {
+//         math: 90,
+//         science: 85
+//     }
+// };
+// let {name, marks: {math,science}} = student;
+// console.log( name);
+// console.log(math);
+// console.log(science);
+
+// const users = [
+//     {  
+//         id: 1,
+//          name: "Kanwal"
+//         },
+//     {
+//         id: 2,
+//          name: "Maham"
+//     }
+// ]
+// let [firstUser, secondUser] = users;
+// console.log(firstUser.name);
+// console.log(secondUser.name);  
+// console.log(firstUser.id);
+// console.log(secondUser.id); 
+
