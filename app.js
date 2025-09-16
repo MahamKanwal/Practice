@@ -423,3 +423,69 @@
 // console.log(firstUser.id);
 // console.log(secondUser.id); 
 
+// Array Of Objects
+// const students = [
+//     { 
+//         name: "Maham",
+//          age: 20, 
+//          city: "Karachi"
+//         },
+//         { 
+//         name: "Kanwal",
+//          age: 21, 
+//          city: "Lahore"
+//         },
+//         { 
+//         name: "Nazia",
+//          age: 22, 
+//          city: "Islamabad"
+//         }
+// ];
+
+// console.log(students[0].name);
+// console.log(students[1].age);
+// console.log(students[2].city);
+
+// Object Of Arrays
+// const classroom = {
+//     girls: ["Maham","Nazia","Manahil"],
+//     boys: ["Ali","Abid","Muneeb"]
+// };
+
+// console.log(classroom.boys[0]);
+// console.log(classroom.boys[1]);
+// console.log(classroom.boys[2]);
+// console.log(classroom.girls[0]);
+// console.log(classroom.girls[1]);
+// console.log(classroom.girls[2]);
+
+// Default Parameters
+// 👉 Definition:
+// Jab function call karte waqt argument pass na kiya jaye, to function automatically ek default value use kar leta hai.
+// Example:
+// function greet(name = "Guest") {
+//     console.log(`Hello, ${name}!`);
+// }
+// greet("Maham");  
+// greet();     
+
+// array for Of
+// object for in
+
+// Rest parameter (...) function ke andar ek array banata hai jo function ko diye gaye multiple arguments ko store karta hai.
+// const sum  = (...numbers) => {
+// let total = 0;
+// for (let num of numbers){
+//     total += num;
+// }
+// return total;
+// }
+// console.log(sum(5, 10, 15, 20));
+
+// Spread operator (...) ek array ya object ko phaila deta hai individual values me. Ye mostly arrays merge karne ya copy banane me use hota hai.
+// Example 1 (Array merge):
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const merged = [...arr1, ...arr2];
+// console.log(merged); 
+
