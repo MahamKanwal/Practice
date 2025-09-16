@@ -344,3 +344,47 @@
 // }
 // const newFunc = outerFunction(`Hello from outside!`);
 // newFunc(`Hello from inside!`);
+
+// Destructuring
+// Array
+// const arr = [10, 20, 30];
+// let a = arr[0];
+// let b = arr[1];
+// let c = arr[2];
+// console.log(a, b, c);
+
+// const arr = [10, 20, 30];
+// let [a, b, c] = arr;
+// console.log(a, b, c);
+
+// const fruits = ["Apple", "Banana", "Mango"];
+// let = [first, second, third] = fruits;
+// console.log(first,second,third);
+
+// const numbers = [1,2,3,4];
+// let [one, ,three] = numbers;
+// console.log(one);
+// console.log(three);
+
+// const colors = ["Red"];
+// let [primary, secondary = "Blue"] = colors;
+// console.log(primary);
+// console.log(secondary);
+
+// Object
+// const person = {
+//     name : "Maham",
+//     area : "Saddar",
+//     city : "Karachi",
+// };
+// let {name, area, city} = person;
+// console.log(name);
+// console.log(area);
+// console.log(city);
+
+const car = {
+    brand : "Toyota",
+    model : "Corolla"
+};
+let { barnd: carBrand, model: carModel} = car;
+console.log()
