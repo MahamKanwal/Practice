@@ -489,3 +489,84 @@
 // const merged = [...arr1, ...arr2];
 // console.log(merged); 
 
+// arrow function
+// function greet(name){
+//  return `Hello ${name}`;
+// };
+// const greet = (name) => {
+//     return `Hello ${name}`;
+// };
+// console.log(greet("Maham"));
+
+// const greet = (name) => `Hello ${name}`;
+// console.log(greet("Maham"));
+
+// const square = x => x * x;
+// console.log(square(5));
+
+// const add = (a, b) => a + b;
+// console.log(add(10, 7));
+
+// const numbers = [1,2,3,4,5];
+// const doubled = numbers.map(n => n * 2);
+// console.log(doubled);
+
+// let age = 20;
+// let result;
+// if (age >= 18){
+//     result = "Adult";
+// }
+// else{
+//     result = "Minor";
+// }
+// let age = 20;
+// let result = age >= 18 ? "Adult" : "Minor";
+// console.log(result);
+
+// let isLoggedIn = true;
+// console.log(isLoggedIn ? "Welcome User" : "Please login");
+
+// let score = 85;
+// let grade = score >= 90 ? "A"
+//            : score >= 75 ? "B"
+//            : score >= 60 ? "C"
+//            : "F";
+// console.log(grade);
+
+// const checkName = (name) => 
+//     !name.trim() ? "Name required" : name.length < 3 ? "Too short" : "valid"; 
+// console.log(checkName(""));
+// console.log(checkName("Ma"));
+// console.log(checkName("Maham"));
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const merged = [...arr1, ...arr2];
+// console.log(merged); 
+
+const form = document.getElementById("form");
+// const inputs = form.querySelectorAll("input");
+
+const state = {
+    values: { name: "", email: "", password: "", confirmPassword:""},
+    errors: {}
+};
+
+const rules = {
+    name: v => (!v.trim() || v.length < 3 ? "name must be 3 characters" : ""),
+    email: v => (!v.trim() || !v.includes("@") ? "enter a valid email" : ""),
+    password: v => (!v.trim() || v.length < 6 ? "password must be 3 characters" : ""),
+    confirmPassword: v => (!v.trim() || !(v == state.values.password) ? "Same as password" : ""),
+};
+
+const formHandler = (e) => {
+    const { id, value} = e.target;
+    validateField(id, value);
+};
+
+const validateField = (id, value) => {
+    const errorMsg = rules[id](value);
+    state.values[id] = value;
+ state.errors[id] = errorMsg;
+};
+
