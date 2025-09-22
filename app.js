@@ -568,5 +568,25 @@ const validateField = (id, value) => {
     const errorMsg = rules[id](value);
     state.values[id] = value;
  state.errors[id] = errorMsg;
-};
+ showError(id, errorMsg);
+ return errorMsg;
+}
 
+const hideError = (id) => {
+document.querySelector(`div[data-error=${id}]`).innerHTML = "";    
+}
+
+const showError = (id, message = "") => {
+      document.querySelector(`div[data-error=${id}]`).innerHTML = message;
+}
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    const hasError = false;
+    const entries = Object.entries(state.values); 
+  
+}
+
+   
+
+form.addEventListener("input",formHandler);
