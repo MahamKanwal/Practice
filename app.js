@@ -544,62 +544,110 @@
 // const merged = [...arr1, ...arr2];
 // console.log(merged);
 
-const form = document.getElementById("form");
-const inputs = form.querySelectorAll("input");
-for (let i of inputs) {
-  i.addEventListener("blur", () => {
-    hideError(i.id);
-  });
-  i.addEventListener("focus", () => {
-    showError(i.id, state.errors[i.id]);
-  });
-}
+// const form = document.getElementById("form");
+// const inputs = form.querySelectorAll("input");
+// for (let i of inputs) {
+//   i.addEventListener("blur", () => {
+//     hideError(i.id);
+//   });
+//   i.addEventListener("focus", () => {
+//     showError(i.id, state.errors[i.id]);
+//   });
+// }
 
-const state = {
-  values: { name: "", email: "", password: "", confirmPassword: "" },
-  errors: {},
-};
+// const state = {
+//   values: { name: "", email: "", password: "", confirmPassword: "" },
+//   errors: {},
+// };
 
-const rules = {
-  name: (v) => (!v.trim() || v.length < 3 ? "name must be 3 characters" : ""),
-  email: (v) => (!v.trim() || !v.includes("@") ? "enter a valid email" : ""),
-  password: (v) =>
-    !v.trim() || v.length < 6 ? "password must be 3 characters" : "",
-  confirmPassword: (v) =>
-    !v.trim() || !(v == state.values.password) ? "Same as password" : "",
-};
+// const rules = {
+//   name: (v) => (!v.trim() || v.length < 3 ? "name must be 3 characters" : ""),
+//   email: (v) => (!v.trim() || !v.includes("@") ? "enter a valid email" : ""),
+//   password: (v) =>
+//     !v.trim() || v.length < 6 ? "password must be 3 characters" : "",
+//   confirmPassword: (v) =>
+//     !v.trim() || !(v == state.values.password) ? "Same as password" : "",
+// };
 
-const formHandler = (e) => {
-  const { id, value } = e.target;
-  validateField(id, value);
-};
+// const formHandler = (e) => {
+//   const { id, value } = e.target;
+//   validateField(id, value);
+// };
 
-const validateField = (id, value) => {
-  const errorMsg = rules[id](value);
-  state.values[id] = value;
-  state.errors[id] = errorMsg;
-  showError(id, errorMsg);
-  return errorMsg;
-};
+// const validateField = (id, value) => {
+//   const errorMsg = rules[id](value);
+//   state.values[id] = value;
+//   state.errors[id] = errorMsg;
+//   showError(id, errorMsg);
+//   return errorMsg;
+// };
 
-const hideError = (id) => {
-  document.querySelector(`div[data-error=${id}]`).innerHTML = "";
-};
+// const hideError = (id) => {
+//   document.querySelector(`div[data-error=${id}]`).innerHTML = "";
+// };
 
-const showError = (id, message = "") => {
-  document.querySelector(`div[data-error=${id}]`).innerHTML = message;
-};
+// const showError = (id, message = "") => {
+//   document.querySelector(`div[data-error=${id}]`).innerHTML = message;
+// };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  let hasError = false;
-  const entries = Object.entries(state.values);
-  for (let e of entries) {
-    const error = validateField(e[0], e[1]);
-    if (error) hasError = true;
-  }
-  if (!hasError) console.log(state.values);
-};
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   let hasError = false;
+//   const entries = Object.entries(state.values);
+//   for (let e of entries) {
+//     const error = validateField(e[0], e[1]);
+//     if (error) hasError = true;
+//   }
+//   if (!hasError) console.log(state.values);
+// };
 
-form.addEventListener("submit", handleSubmit);
-form.addEventListener("input", formHandler);
+// form.addEventListener("submit", handleSubmit);
+// form.addEventListener("input", formHandler);
+
+// Enhanced Object Literals
+// let name = "Maham";
+// let city = "Karachi";
+
+// let user1 = {
+//   name: name,
+//   city: city
+// };
+
+// let user2 = {
+//   name,
+//   city
+// };
+// console.log(user2);
+
+// let person = {
+//   name: "Maham",
+//   greet: function(){
+//     return `Hello ${this.name}`;
+//   },
+//   sayHi(){
+//      return `Hi ${this.name}`;
+//   }
+// };
+// console.log(person.greet());
+// console.log(person.sayHi());
+
+// let key = "email";
+// let user = {
+//   name: "Maham",
+//   [key]: "example@gmail.com"
+// };
+// console.log(user);
+
+// let key = "userId";
+// let name = "Maham";
+// let user = {
+//   name,
+//   email: "ali@gmail.com",
+//   city: "Thatta",
+//   greet(){
+//     return `Hello my name is ${this.name}`;
+//   },
+//   [key]:12345
+// }
+// console.log(user);
+// console.log(user.greet());
