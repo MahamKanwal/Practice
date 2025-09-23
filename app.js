@@ -1,6 +1,6 @@
 // alert("Thanks for your input");
 
-// var name = "Maham"; 
+// var name = "Maham";
 // name = "Kanwal";
 // alert(name);
 
@@ -45,7 +45,7 @@
 // console.log(popularNumber);
 
 // var num = 50;
-// var anotherNum = 7; 
+// var anotherNum = 7;
 // var popularNumber = num + anotherNum;
 // console.log(popularNumber);
 
@@ -408,7 +408,7 @@
 // console.log(science);
 
 // const users = [
-//     {  
+//     {
 //         id: 1,
 //          name: "Kanwal"
 //         },
@@ -419,25 +419,25 @@
 // ]
 // let [firstUser, secondUser] = users;
 // console.log(firstUser.name);
-// console.log(secondUser.name);  
+// console.log(secondUser.name);
 // console.log(firstUser.id);
-// console.log(secondUser.id); 
+// console.log(secondUser.id);
 
 // Array Of Objects
 // const students = [
-//     { 
+//     {
 //         name: "Maham",
-//          age: 20, 
+//          age: 20,
 //          city: "Karachi"
 //         },
-//         { 
+//         {
 //         name: "Kanwal",
-//          age: 21, 
+//          age: 21,
 //          city: "Lahore"
 //         },
-//         { 
+//         {
 //         name: "Nazia",
-//          age: 22, 
+//          age: 22,
 //          city: "Islamabad"
 //         }
 // ];
@@ -466,8 +466,8 @@
 // function greet(name = "Guest") {
 //     console.log(`Hello, ${name}!`);
 // }
-// greet("Maham");  
-// greet();     
+// greet("Maham");
+// greet();
 
 // array for Of
 // object for in
@@ -487,7 +487,7 @@
 // const arr1 = [1, 2, 3];
 // const arr2 = [4, 5, 6];
 // const merged = [...arr1, ...arr2];
-// console.log(merged); 
+// console.log(merged);
 
 // arrow function
 // function greet(name){
@@ -533,8 +533,8 @@
 //            : "F";
 // console.log(grade);
 
-// const checkName = (name) => 
-//     !name.trim() ? "Name required" : name.length < 3 ? "Too short" : "valid"; 
+// const checkName = (name) =>
+//     !name.trim() ? "Name required" : name.length < 3 ? "Too short" : "valid";
 // console.log(checkName(""));
 // console.log(checkName("Ma"));
 // console.log(checkName("Maham"));
@@ -542,51 +542,64 @@
 // const arr1 = [1, 2, 3];
 // const arr2 = [4, 5, 6];
 // const merged = [...arr1, ...arr2];
-// console.log(merged); 
+// console.log(merged);
 
 const form = document.getElementById("form");
-// const inputs = form.querySelectorAll("input");
+const inputs = form.querySelectorAll("input");
+for (let i of inputs) {
+  i.addEventListener("blur", () => {
+    hideError(i.id);
+  });
+  i.addEventListener("focus", () => {
+    showError(i.id, state.errors[i.id]);
+  });
+}
 
 const state = {
-    values: { name: "", email: "", password: "", confirmPassword:""},
-    errors: {}
+  values: { name: "", email: "", password: "", confirmPassword: "" },
+  errors: {},
 };
 
 const rules = {
-    name: v => (!v.trim() || v.length < 3 ? "name must be 3 characters" : ""),
-    email: v => (!v.trim() || !v.includes("@") ? "enter a valid email" : ""),
-    password: v => (!v.trim() || v.length < 6 ? "password must be 3 characters" : ""),
-    confirmPassword: v => (!v.trim() || !(v == state.values.password) ? "Same as password" : ""),
+  name: (v) => (!v.trim() || v.length < 3 ? "name must be 3 characters" : ""),
+  email: (v) => (!v.trim() || !v.includes("@") ? "enter a valid email" : ""),
+  password: (v) =>
+    !v.trim() || v.length < 6 ? "password must be 3 characters" : "",
+  confirmPassword: (v) =>
+    !v.trim() || !(v == state.values.password) ? "Same as password" : "",
 };
 
 const formHandler = (e) => {
-    const { id, value} = e.target;
-    validateField(id, value);
+  const { id, value } = e.target;
+  validateField(id, value);
 };
 
 const validateField = (id, value) => {
-    const errorMsg = rules[id](value);
-    state.values[id] = value;
- state.errors[id] = errorMsg;
- showError(id, errorMsg);
- return errorMsg;
-}
+  const errorMsg = rules[id](value);
+  state.values[id] = value;
+  state.errors[id] = errorMsg;
+  showError(id, errorMsg);
+  return errorMsg;
+};
 
 const hideError = (id) => {
-document.querySelector(`div[data-error=${id}]`).innerHTML = "";    
-}
+  document.querySelector(`div[data-error=${id}]`).innerHTML = "";
+};
 
 const showError = (id, message = "") => {
-      document.querySelector(`div[data-error=${id}]`).innerHTML = message;
-}
+  document.querySelector(`div[data-error=${id}]`).innerHTML = message;
+};
 
 const handleSubmit = (e) => {
-    e.preventDefault();
-    const hasError = false;
-    const entries = Object.entries(state.values); 
-  
-}
+  e.preventDefault();
+  let hasError = false;
+  const entries = Object.entries(state.values);
+  for (let e of entries) {
+    const error = validateField(e[0], e[1]);
+    if (error) hasError = true;
+  }
+  if (!hasError) console.log(state.values);
+};
 
-   
-
-form.addEventListener("input",formHandler);
+form.addEventListener("submit", handleSubmit);
+form.addEventListener("input", formHandler);
