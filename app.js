@@ -544,66 +544,6 @@
 // const merged = [...arr1, ...arr2];
 // console.log(merged);
 
-// const form = document.getElementById("form");
-// const inputs = form.querySelectorAll("input");
-// for (let i of inputs) {
-//   i.addEventListener("blur", () => {
-//     hideError(i.id);
-//   });
-//   i.addEventListener("focus", () => {
-//     showError(i.id, state.errors[i.id]);
-//   });
-// }
-
-// const state = {
-//   values: { name: "", email: "", password: "", confirmPassword: "" },
-//   errors: {},
-// };
-
-// const rules = {
-//   name: (v) => (!v.trim() || v.length < 3 ? "name must be 3 characters" : ""),
-//   email: (v) => (!v.trim() || !v.includes("@") ? "enter a valid email" : ""),
-//   password: (v) =>
-//     !v.trim() || v.length < 6 ? "password must be 3 characters" : "",
-//   confirmPassword: (v) =>
-//     !v.trim() || !(v == state.values.password) ? "Same as password" : "",
-// };
-
-// const formHandler = (e) => {
-//   const { id, value } = e.target;
-//   validateField(id, value);
-// };
-
-// const validateField = (id, value) => {
-//   const errorMsg = rules[id](value);
-//   state.values[id] = value;
-//   state.errors[id] = errorMsg;
-//   showError(id, errorMsg);
-//   return errorMsg;
-// };
-
-// const hideError = (id) => {
-//   document.querySelector(`div[data-error=${id}]`).innerHTML = "";
-// };
-
-// const showError = (id, message = "") => {
-//   document.querySelector(`div[data-error=${id}]`).innerHTML = message;
-// };
-
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-//   let hasError = false;
-//   const entries = Object.entries(state.values);
-//   for (let e of entries) {
-//     const error = validateField(e[0], e[1]);
-//     if (error) hasError = true;
-//   }
-//   if (!hasError) console.log(state.values);
-// };
-
-// form.addEventListener("submit", handleSubmit);
-// form.addEventListener("input", formHandler);
-
 // Enhanced Object Literals
 // let name = "Maham";
 // let city = "Karachi";
@@ -651,3 +591,78 @@
 // }
 // console.log(user);
 // console.log(user.greet());
+
+// Form Validation
+
+//  const form = document.getElementById("form");
+// const inputs = form.querySelectorAll("input");
+// for(let i of inputs){
+//  i.addEventListener("blur", ()=>{
+//    hideError(i.id);
+// });
+// i.addEventListener("focus", ()=>{
+//   showError(i.id,state.errors[i.id]);
+// });
+// };
+
+// const intialValues ={
+//   values:{ name:"", email: "", password: "", confirmPassword: ""},
+//   errors:{}
+// };
+
+// const state = {...intialValues};
+// console.log(state);
+// const rules = {
+//   name: v => (!v.trim() || v.length < 3 ? "Name must be 3 characters" : ""),
+//   email: v => (!v.trim() || !v.includes("@") ? "Enter a valid email" : ""),
+//   password: v => (!v.trim() || v.length < 6 ? "Password must be 6 characters" : ""),
+//   confirmPassword: v => (!v.trim() || !(v == state.values.password) ? "Password doesn't match" : ""),
+// };
+
+// const formHandler = (e) => {
+// const {id, value} = e.target;
+// formValidate(id,value);
+// };
+
+// const formValidate = (id, value) => {
+//   const errorMsg = rules[id](value); 
+//   state.values[id] = value;
+//   state.errors[id] = errorMsg;
+//   showError(id,errorMsg);
+//   return errorMsg;
+// };
+
+// const showError = (id,message= "") => {
+//   document.querySelector(`div[data-error=${id}]`).innerHTML = message;
+// };
+
+// const hideError = (id) => {
+//   document.querySelector(`div[data-error=${id}]`).innerHTML = "";
+// };
+
+// const formSubmit = (e) => {
+// e.preventDefault();
+// let hasError = false;
+// let entries = Object.entries(state.values);
+// for (let e of entries){
+// let error = formValidate(e[0],e[1]);
+// if(error) hasError = true;}
+// if(!hasError) {
+//   form.reset();
+//   console.log(state.values);
+//   state = { ...intialValues};
+// }
+// };
+
+// const togglePassword = (e) =>{
+// e.classList.toggle("fa-eye");
+// e.classList.toggle("fa-eye-slash");
+// let passwordInput = e.previousElementSibling;
+// let inputType = e.previousElementSibling.type;
+// passwordInput.type = inputType == "text" ? "password" : "text";
+//  }
+
+// form.addEventListener("submit",formSubmit);
+// form.addEventListener("input",formHandler);
+
+// Form Validation
