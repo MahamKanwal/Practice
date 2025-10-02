@@ -752,11 +752,12 @@
 //     for (let num of numbers){
 //         if (num > greatest) {
 //             greatest = num;
+//             console.log(greatest);
 //         }
 // }
 // }
+// findGreatest([1, 3, 2, 5, 3, 5]);
 
-// findGreatest([1, 3, 2, 5, 3, 5])
 // const totalNum = (numbers) =>{
 //      let total = 0;
 // for (let num of numbers){
@@ -776,7 +777,7 @@
 
 // let num = Number(prompt("enter any number"))
 // sum = 0;
-// for(i=1; i <= num; i++ ){
+// for(let i=1; i <= num; i++ ){
 //     sum += i;
 //     console.log(i)
 // }
@@ -812,6 +813,7 @@
 //     }
 // }
 // console.log(newArr2);
+// yahan sy karna h
 
 // Count Words in String Sawal: Ek sentence input lo "I love JavaScript" → count karo kitne words hain
 
@@ -914,3 +916,76 @@
 // let ulta = myReverse("hellow");
 // let ulta2 = myReverse("enum");
 // console.log(ulta2);
+
+// for(let i = 1; i <= 10; i+2){
+//     console.log(`Odd Numbers:${i}`);
+// }
+let students = [];
+const formSubmit = () => {
+let hasError = false;
+let entries = Object.entries(state.values);
+for (let e of entries){
+    let error = formValidate(e[0], e[1]);
+    if (error) hasError = true;
+}
+    if (!hasError){
+        const s = entries.map((std) => [std[0], std[1].toLowerCase()]);
+        const student = {};
+        for (let data of s){
+            student[data[0]] = data[1];
+        }
+        if (state.values.id){
+       fetch(`${apiBaseUrl}/${state.values.id}`, {
+        headers: {
+            Accept : "application/json",
+            "Content-Type": "application/json",
+        },
+        method: "PUT",
+        body: JSON.stringify(student),
+       });
+       const index = students.findindex((s) => s.id == state.values.id);
+       students.splice(index,1,student);
+        } else{
+            fetch(apiBaseUrl, {
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                method: "POST",
+                body: JSON.stringify(student),
+            });
+            students.push(student);
+                }
+  form.reset();
+  state = {...initialValues};
+  toggleDrawer();
+  renderStudents(students);
+    }
+};
+
+let filters = {};
+const filterData = (e) => {
+const { id, value: v} = e;
+filters[id] = v;
+const filterData = students.filter((row) => {
+const matchStatus = !filters.status || row.status === filters.status;
+const matchCourse = !filters.course || row.course === filters.course;
+const matchSearch = !filters.search || 
+row.name.includes(filters.serach.toLowerCase()) ||
+row.email.includes(filters.search.toLowerCase()) ||
+row.rollNo.includes(filters.search.toLowerCase());
+return matchStatus && matchCourse && matchSearch;
+});
+renderStudents(filterData);
+};
+
+const handleReset = () => {
+    for (let inp of filterBar){
+        inp.value = "";
+    }
+    filters = {};
+}
+
+
+
+
