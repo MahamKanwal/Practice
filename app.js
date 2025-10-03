@@ -959,7 +959,7 @@ for (let e of entries){
   form.reset();
   state = {...initialValues};
   toggleDrawer();
-  renderStudents(students);
+  setDataByCurrentPage(students);
     }
 };
 
@@ -984,8 +984,36 @@ const handleReset = () => {
         inp.value = "";
     }
     filters = {};
+    setDataByCurrentPage(students);
 }
 
+let currentPage = 1;
+const perPage = 5;
+let totalPages;
 
+const setDataByCurrentPage = (data) => {
+    const totalRows = data.length;
+    totalPages = Math.ceil(totalRows / perPage);
+    const startPage = Math.max(1, currentPage -2);
+    const endPage = Math.min(totalPages, startPage + 4);
+    const diff = totalPages - startPage;
+    if (diff < 4) startPage = totalPages - 4;
+    for (let i = startPage; i <= endPage; i++){
+    pageBtns.innerHTML += `
+    <button class"border-2 px-4 ${
+     i == currentPage ? "border-blue-600" : ""
+    }"
+    onclick="goToPage(${i})"
+    ${i}
+</button>`;
+}
+const startIndex = (currentPage - 1) * perPage;
+const endIndex = startIndex + perPage;
+const selectData = data.slice(startIndex, endIndex);
+renderStudents(selectData);
+};
 
-
+const goToPage = (page) => {
+    currentPage = page;
+    setDataByCurrentPage(students);
+}
