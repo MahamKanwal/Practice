@@ -248,3 +248,74 @@
 // },1000)
 // }
 
+// Classes
+// class Batch {
+//   constructor(batch) {
+//     this.batch = batch;
+//   }
+// }
+// class User {
+//   constructor(name, surname) {
+//     this.name = name;
+//     this.surname = surname;
+//     this.nationality = "Pakistani";
+//   }
+//     getLeave(days) {
+//     console.log(`You are allowed ${days} days leave`);
+//   }
+// }
+
+// class Student extends User {
+//   constructor(name, surname, school) {
+//     super(name, surname); 
+//     this.school = school;
+//   }
+
+//   submitFees(fees) {
+//     console.log(`Fees submitted: ${fees}`);
+//   }
+// } 
+// class Employee extends User {
+//   constructor(name, surname, salary) {
+//     super(name, surname); 
+//     this.salary = salary;
+//   }
+   
+//    jobResign(reason){
+//       console.log(reason)
+//    }
+
+// }
+
+// const student1 = new Student("Ali", "Khan", "New School");
+// const employee1 = new Employee("Ahmed", "Khan", 20000);
+// console.log(student1);
+// console.log(employee1);
+// employee1.jobResign("salary is very low");
+
+// class Person{
+//     constructor (name, address) {
+//     this.name = name;
+//     this.address = address;
+//     }
+//     greet(){
+//       console.log(`Hello, my name is ${this.name} and I live in ${this.address}`)
+//     }
+// }
+
+// const person1 = new Person("Maham","Jacob Line");
+// person1.greet();
+
+// class Student extends Person {
+//   constructor(name,address,course){
+//     super(name, address); //calls parent class constructor
+//     this.course = course;
+//   }
+//   study(){
+//     console.log(`${this.name} is studying ${this.course}`);
+//   }
+// }
+// const student1 = new Student("Kanwal", "Jacob Line","Web Development");
+// student1.greet();
+// student1.study();
+
