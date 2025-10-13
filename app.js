@@ -319,3 +319,26 @@
 // student1.greet();
 // student1.study();
 
+// const numbers = [10, 20 ,30];
+// const iterator = numbers[Symbol.iterator]();
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+// const  fruits = ["apple","banana","mango"];
+// for(let fruit of fruits){
+//     console.log(fruit);
+// }
+
+// function* numberGenerator(){
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+// const gen = numberGenerator();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
