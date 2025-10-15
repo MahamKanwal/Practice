@@ -342,3 +342,68 @@
 // console.log(gen.next());
 // console.log(gen.next());
 
+// Practice Of Context In React
+// import { createContext, useContext, useState } from "react";
+
+// const StudentContext = createContext();
+
+// const StudentProvider = ({ children }) => {
+//     const [students, setStudents] = useState([
+//         { id:1, name: "ali", email: "ali@gmail.com"},
+//         { id:2, name: "ahmed", email: "ahmed@gmail.com"},
+//         { id:3, name: "alina", email: "alina@gmail.com"},
+//     ]);
+
+// const handleDeleteSubmit = (id) => {
+//     const updateStudents = students.filter(std => std.id != id)
+//     setStudents(updateStudents);
+// }
+
+// const studentContextValue = {
+//     students,
+//     handleDeleteStudent
+// };
+
+// return (
+// <StudentContext.Provider value={studentContextValue}>
+//     {children}
+//     </StudentContext.Provider>
+// )
+// }
+
+// export default StudentProvider;
+
+// export const useSStudents = () => useContext(StudentContext);
+
+// import {createRoot} from 'react-dom/client'
+// import '.index.css'
+// import App from './App'
+// import StudentProvider from './contexts/StudentContext'
+// createRoot(document.getElementById('root')).render(
+//     <StudentProvider>
+//         <App/>
+//     </StudentProvider>
+// ) 
+
+// import React from 'react'
+// import { useStudents } from '../contexts/StudentContext';
+
+// const TableRow = ({ name, email, id }) => {
+//   const { handleDeleteStudent } = useStudents();
+
+//   const handleDelete = () => {
+//     handleDeleteStudent(id);
+//   };
+
+//   return (
+//     <tr>
+//       <td>{name}</td>
+//       <td>{email}</td>
+//       <td>
+//         <button onClick={handleDelete}>Delete</button>
+//       </td>
+//     </tr>
+//   );
+// };
+
+// export default TableRow;
