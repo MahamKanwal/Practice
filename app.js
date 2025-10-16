@@ -407,3 +407,17 @@
 // };
 
 // export default TableRow;
+
+import { createContext, useContext, useState } from "react";
+
+const StudentContext = createContext();
+
+const StudentProvider = ({ children }) => {
+    const [students, setStudents] = useState({});
+    const [editStudent, setEditStudennt] = useState(null);
+
+const handleDeleteStudent = (id) => {
+    const updateStudents = students.filter(std => std.id != id)
+    setStudents(updateStudents)
+}
+}
