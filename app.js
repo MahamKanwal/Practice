@@ -408,16 +408,120 @@
 
 // export default TableRow;
 
-import { createContext, useContext, useState } from "react";
+// import { createContext, useContext, useState } from "react";
 
-const StudentContext = createContext();
+// const StudentContext = createContext();
 
-const StudentProvider = ({ children }) => {
-    const [students, setStudents] = useState({});
-    const [editStudent, setEditStudennt] = useState(null);
+// const StudentProvider = ({ children }) => {
+//     const [students, setStudents] = useState({});
+//     const [editStudent, setEditStudennt] = useState(null);
 
-const handleDeleteStudent = (id) => {
-    const updateStudents = students.filter(std => std.id != id)
-    setStudents(updateStudents)
-}
-}
+// const handleDeleteStudent = (id) => {
+//     const updateStudents = students.filter(std => std.id != id)
+//     setStudents(updateStudents);
+// }
+
+// const addAndUpdateStudent = (std) => {
+//     if (editStudent) {
+//         const updateStudents = students.map(oldStd => oldStd.id ==
+//             editStudent.id ? std : oldStd);
+//             setStudents(updateStudents);
+//     } else {
+//         const newStd = {...std, id: students.length + 1};
+//         setStudents([...students, newStd]);
+//     }
+// }
+
+// const editStudentFn = (std) => {
+//     setEditStudennt(std)
+// }
+
+// const studentContextValue = {
+//     students,
+//     addAndUpdateStudent,
+//     editStudent,
+//     editStudentFn,
+//     handleDeleteStudent
+// };
+
+// return (
+// <StudentContext.Provider value={studentContextValue}>
+// {children}
+// </StudentContext.Provider>
+// );
+// };
+
+// export default StudentProvider;
+
+// export const useStudents = () => useContext(StudentContext);
+
+// import { Children, createContext, useContext, useEffect, useState} from "react";
+
+// const ThemeContext = createContext();
+// const ThemeProvider = {( children)} => {
+// const getThemeValue = () => {
+// return localStorage.getItem("darkMode") === "true";
+// };
+
+//  const {darkMode, setDarkMode} = useState(getThemeValue);
+
+//  const toggleTheme = () => {
+//   const newMode = !darkMode;
+//   localStorage.setItem("darkMode", newMode);
+//   setDarkMode(newMode);
+//  };
+
+//  useEffect(() => {
+//   if (darkMode){
+//    document.documentElement.classList.add("dark");
+//   } else {
+//     document.documentElement.classList.remove("dark");
+//   }
+//  }, [darkMode]);
+
+// const themeContextValue = {
+//   darkMode,
+//   toggleTheme
+// };
+
+// return(
+//   <ThemeContext.Provider value={themeContextValue}>
+//     {children}
+//   </ThemeContext.Provider>
+// );
+// };
+
+// export default ThemeProvider;
+// export const useTheme = () => useContext(ThemeContext);
+
+// import {FaMoon , FaSun } from "react-icons/fa";
+// import {useTheme} from "../contexts/ThemeContext";
+// const TopBar = () => {
+// const { darkMode, toggleTheme} = useTheme();
+// return(
+//   <div className="flex justify-between dark:text-white items-center px-6 py-3 bg-white dark:bg-black shadow-md transition-all duration-300">
+//     <h1 className="text-2xl font-bold tracking-wide">My Premium App</h1>
+// <button onClick={toggleTheme}
+// className="p-2 rounded-full bg-white/20 hover:bg-white/30 dark:bg-black/20 dark:hover:bg-black/30 transition-colors duration-200"
+// aria-label>{darkMode ? <FaSun className="h-6 w-6 text-yellow-300"/> :
+//  <FaMoon className="h-6 w-6" />}</button>
+//   </div>
+// );
+// };
+
+// export default TopBar;
+
+// import { createContext, useContext, useState } from "react";
+
+// const StudentContext = createContext();
+
+// const StudentProvider = ({children}) => {
+//   const [students, setStudents] = useState([]);
+//   const [editStudent, setEditStudennt] = useState(null);
+
+//   const handleDeleteStudent = (id) => {
+//     const updatedStudents = students.filter(std => 
+
+//     )
+//   }
+// }
