@@ -511,17 +511,48 @@
 
 // export default TopBar;
 
-// import { createContext, useContext, useState } from "react";
+// import {createContext, useContext, useState} from "react";
 
 // const StudentContext = createContext();
 
 // const StudentProvider = ({children}) => {
-//   const [students, setStudents] = useState([]);
-//   const [editStudent, setEditStudennt] = useState(null);
+//     const [students , setStudents] =  useState([]);
+//     const [editStudent, setEditStudennt] =  useState(null);
 
-//   const handleDeleteStudent = (id) => {
-//     const updatedStudents = students.filter(std => 
+// const handleDeleteStudent = (id) => {
+//   const updatedStudents = students.filter(std => std.id != id)
+//   setStudents(updatedStudents);
+// };
 
-//     )
+// const addAndUpdateStudent = (newStd) => {
+//   if (editStudent){
+//     const updateStudents = students.map(oldStd => oldStd.id == editStudent.id ? newStd : oldStd);
+//     setStudents(updateStudents);
+//     setEditStudennt(null);
+//   } else{
+//     setStudents([...students, {...newStd, id: students.length +1}]);
 //   }
+// };
+
+// const editStudentFn = (std) => {
+//   setEditStudennt(std);
+// };
+
+// const studentContextValue = {
+// students,
+// addAndUpdateStudent,
+// editStudent,
+// editStudentFn,
+// handleDeleteStudent
+// };
+
+// return (
+//  <StudentContext.Provider value={studentContextValue}>
+//   {children}
+//   </StudentContext.Provider>
+// )
 // }
+
+// export default StudentProvider;
+
+// export const useStudents = () => useContext(StudentContext);
