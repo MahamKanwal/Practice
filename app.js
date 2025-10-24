@@ -365,3 +365,118 @@
 //     </button>
 //   );
 // }
+
+// Promises
+
+// let myPromise = new Promise ((resolve, reject) => {
+//     let success = true;
+//     if(success){
+//         resolve("Success!");
+//     } else {
+//         reject("Failure!");
+//     }
+// });
+
+// myPromise
+// .then(result => console.log(result))
+// .catch(error => console.log(error));
+
+// myPromise
+// .then(res => console.log("Success:", res))
+// .catch(err => console.log("Error:", err))
+// .finally( ()=> console.log("Hamesha Chalega!"));
+
+// const pizzaPromise = new Promise((resolve, reject) => {
+//     let pizzaReady = true;
+
+//     if (!pizzaReady){
+//         resolve("Pizza aa gaya! 🍕");
+//     } else {
+//     reject("Oops! Pizza jal gaya 😭");
+//   }
+// });
+
+// pizzaPromise 
+// .then(msg => console.log(msg))
+// .catch(err => console.log(err));
+
+// const task1 = new Promise((resolve) => {
+//     setTimeout(() => {
+//         resolve("Data ready!");
+
+//     },2000);
+// });
+// task1.then(result => console.log(result));
+
+// const task2 = new Promise((resolve,reject) => {
+//     reject("Data not ready!");
+// });
+// task2.catch(error => console.log(error));
+
+// let myPromise = new Promise((resolve,reject) => {
+//     let internet = true;
+//     if(internet){
+//         resolve("Internet Working - Data Loaded!");
+//     } else {
+//         reject("No Internet - No Data!");
+//     }
+// });
+// myPromise
+// .then(res => console.log(res))
+// .catch(err => console.log(err))
+// .finally(() => console.log("Promise Settled!"));
+
+// const checkPizza = (status) => {
+//     return new Promise((resolve, reject)=>{
+//         if(status===true){
+//             resolve("Pizza is ready! 🍕");
+//         }
+//         else{
+//             reject("Pizza is not ready! 😞");
+//         }
+//     })
+// }
+// checkPizza(true)
+// .then(msg => console.log(msg))
+// .catch(err => console.log(err));    
+
+// const cutting = () => {
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve("Cutting Vegetables"),1000);
+//     });
+// };
+
+// const cooking = () => {
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve("Cooking"),1000);
+// });
+// };
+
+// const serving = () => {
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve("Serving"),1000);
+//     });
+// };
+
+// cutting()
+// .then (res => {
+// console.log(res);
+// return cooking();
+// })
+// .then (res => {
+//     console.log(res);
+//     return serving();
+// })
+// .then(res => console.log(res))
+// .catch(err => console.log(err));
+
+// const getUser = () => {
+//     return new Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             resolve({name:"Maham", city: "Karachi"});
+//         },2000)
+//     });
+// };
+// getUser()
+// .then(user => console.log(user))
+// .catch(error => console.log(error));
