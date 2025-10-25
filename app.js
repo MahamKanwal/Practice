@@ -331,17 +331,6 @@
 //     console.log(fruit);
 // }
 
-// function* numberGenerator(){
-//     yield 1;
-//     yield 2;
-//     yield 3;
-// }
-// const gen = numberGenerator();
-// console.log(gen.next());
-// console.log(gen.next());
-// console.log(gen.next());
-// console.log(gen.next());
-
 // Child → Parent (passing data up)
 // Data child se parent mein tab jata hai jab parent ek function as prop bhejta hai, aur child us function ko call karke data send karta hai.
 // const Parent = () => {
@@ -480,3 +469,120 @@
 // getUser()
 // .then(user => console.log(user))
 // .catch(error => console.log(error));
+
+// function* numberGenerator(){
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+// const gen = numberGenerator();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+// function* generatorFunction(){
+//     yield "Step 1";
+//     yield "Step 2";
+//     yield "Step 3";
+// }
+
+// const gen = generatorFunction();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+// function* infiniteCounter(){
+//     let i = 1;
+//     while(true){
+//         yield i++;
+//     }
+// }
+
+// const counter = infiniteCounter();
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+
+// function* mealGenerator() {
+//     yield " Starter Served";
+//     yield " Main Course Served";
+//     yield " Dessert Served";
+//     yield " All Food Delivered!";
+// }
+
+// const waiter = mealGenerator();
+// console.log(waiter.next());
+// console.log(waiter.next());
+// console.log(waiter.next());
+// console.log(waiter.next());
+// console.log(waiter.next());
+
+// export const pizza = "Pizza is delicious!";
+// export const orderPizza = () => {
+//     console.log("Pizza ordered!");
+// }
+
+// import { pizza , orderPizza} from "./app.js";
+// console.log(pizza);
+// orderPizza();
+
+// const myMap = new Map();
+// myMap.set("name","Maham");
+// myMap.set(1,"id");
+// myMap.set(true,"active user");
+
+// console.log(myMap.get("name"));
+// console.log(myMap.get(1));
+// console.log(myMap.get(true));
+// console.log(myMap.size)
+
+// const newMap = new Map();
+// newMap.set("fruit","apple");
+// console.log(newMap.get("fruit"));
+
+// const nums = [1,2,3];
+// const doubled = nums.map(n => n * 2);
+// console.log(doubled);
+
+// const students = new Map();
+
+// students.set(101,"Ali");
+// students.set(102,"Maham");
+// students.set(103,"Kanwal");
+// console.log(students.get(103));
+// console.log(students.get(101));
+// console.log(students.has(103));
+// console.log(students.size);
+// console.log(students.delete(103));
+// console.log(students.clear());
+
+// const marks = [50, 60 ,70, 80, 90];
+// const updatedMarks = marks.map(score => score + 10);
+// console.log(updatedMarks);
+
+// const studentMarks  = new Map();
+// studentMarks.set("Ali",85);
+// studentMarks.set("Maham",90);
+// studentMarks.set("Kanwal",95);
+
+// const updated = [...studentMarks.values()].map(mark => mark + 5);
+// console.log(updated);
+
+// const updated2 = [...studentMarks.entries()].map(([name,marks]) => {
+//     return `${name} : ${marks + 10}`
+// });
+// console.log(updated2);
+
+// const updated3 = [...studentMarks.keys()].map((name) => {
+//     return `${name}`
+// });
+// console.log(updated3);
+
+
+
+
+
