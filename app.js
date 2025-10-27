@@ -4,6 +4,12 @@
 // }
 // findWord(["on","of","oh"],"off");
 
+// const findWord = (words,word) => {
+//     let a = words.includes(word);
+//     console.log(a);
+// };
+// findWord(["on","of","oh"],"off")
+
 // const palindromeWords = (word) => {
 // let ulta = word.split("").reverse().join("");
 // console.log(ulta == word);
@@ -68,7 +74,6 @@
 // console.log(computerGuess);
 // let userGuess = prompt("enter a number from 0 to 10");
 // let tries = 1;
-
 // while (userGuess != computerGuess){
 //     userGuess = prompt("try again");
 //     tries++;
@@ -193,6 +198,17 @@
 // for (let i = 0; i < word.length; i++){
 //     if(vowel.includes(word[i])){
 // count++;
+//     }
+// }
+// console.log(`The ${word} has ${count} vowels`);
+
+// let word = prompt("Enter any word");
+// word = word.toLowerCase();
+// const vowel = "aeiou";
+// let count = 0;
+// for (let i = 0; i < word.length; i++){
+//     if (vowel.includes(word[i])){
+//         count++;
 //     }
 // }
 // console.log(`The ${word} has ${count} vowels`);
@@ -581,6 +597,105 @@
 //     return `${name}`
 // });
 // console.log(updated3);
+
+// const users = ["Maham","Ali","Kanwal"];
+// users.forEach((item) => {
+//     console.log(item);
+// })
+
+// for (const item of users){
+//     console.log(item);
+// }
+// const myMap = new Map();
+// const obj = {}
+// myMap.set(obj, "hello");
+// console.log(myMap.get(obj));
+// console.log(myMap.get({})); 
+
+// const myMap = new Map();
+
+// const person = { name: "Maham" }; // object
+// myMap.set(person, "Full Stack Developer");
+
+// console.log(myMap.get(person));
+// Full Stack Developer
+
+// const userRoles = new Map();
+
+// function login() {} // function as key
+
+// userRoles.set(login, "Admin Function Call");
+
+// console.log(userRoles.get(login));
+// Admin Function Call
+
+// const fruits = ["Apple","Banana"];
+// fruits.push("Mango");
+// console.log(fruits);
+
+// const fruits = ["Apple","Banana","Mango"];
+// fruits.pop();
+// console.log(fruits);
+
+// const nums = [2,3,4,5];
+// nums.unshift(1);
+// console.log(nums);
+
+// const nums = [1,2,3,4];
+// nums.shift();
+// console.log(nums);
+
+// const numbers = [1,2,3];
+// const squared = numbers.map(n => n * n);
+// console.log(squared);
+
+// const ages = [12, 18, 20 , 10];
+// const adults = ages.filter(age => age >= 18);
+// console.log(adults);
+
+// const ages = [12, 18, 20 ,10];
+// const firstAdult = ages.find(age => age >= 18);
+// console.log(firstAdult);
+
+// const nums = [10, 20, 30];
+// const findIdxNum = nums.findIndex(n => n === 20);
+// console.log(findIdxNum);
+
+// const numbers = [1,2,3,4];
+// const total = numbers.reduce((acc, curr) => acc + curr, 0);
+// console.log(total);
+
+// const arr = [1, 2, 3];
+// arr.forEach(item => console.log(item));
+
+// const arr = ["a","b","c"];;
+// const checkedValue = arr.includes("a");
+// console.log(checkedValue);
+
+// const animals = ["cat", "dog", "cow", "goat"];
+// console.log(animals.slice(1,3));
+
+// const items = ["a","b","d"];
+// items.splice(2, 0, "c");
+// console.log(items);
+
+// const nums = [4, 1, 10, 2];
+// nums.sort((a,b) => a-b); 
+// console.log(nums);
+
+// const words = ["Hello", "World"];
+// const str = words.join(" ");
+// console.log(str);
+
+// const str = "Hello World";
+// const arr = str.split(" ");
+// console.log(arr);
+
+// const a = [1, 2];
+// const b = [3, 4];
+// const c = a.concat(b);
+// console.log(c);
+
 
 
 
