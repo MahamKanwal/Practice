@@ -696,8 +696,66 @@
 // const c = a.concat(b);
 // console.log(c);
 
+//  const greet = (name) => {
+//     return `Hello ${name}`;
+//  }
+//  const processUnitInput = (callback) =>{
+//     let name = "Maham";
+//     console.log(callback(name));
+//  }
+//  processUnitInput(greet);
 
+// const greetInEnglish = (name) => {
+//     return `Hello ${name}`;
+// }
+// const greetInurdu = (name) => {
+//     return `Assalam-o-Alaikum ${name}`;
+// }
+// const processUnitInput = (callback) => {
+//     let name = "Maham";
+//     console.log(callback(name));
+// }
+// processUnitInput(greetInEnglish);
+// processUnitInput(greetInurdu);
 
+// const multiplier = (factor) => {
+//     return (number) => {
+//         return number * factor;
+//     };
+// }
+// const double = multiplier(2);
+// const triple = multiplier(3);
+// console.log(double(5));
+// console.log(triple(5));
 
+// const numbers = [1, 2, 3, 4];
+// const squared = numbers.map(num => {
+//     return num * num;
+// });
+// console.log(squared);
 
+// const ages = [10, 18, 25, 12];
+// const adults = ages.filter(age => age >= 18);
+// console.log(adults);
 
+// const fruits = ["apple", "banana", "mango"];
+// fruits.forEach(fruit => console.log(fruit));
+
+// const calculate = (arr, operation) => {
+//     const result = [];
+//     for (let i of arr){
+//         result.push(operation(i));
+//     }
+//     return result;
+// }
+
+// const square = (x) => {
+//     return x * x;
+// }
+
+// const cube = (x) => {
+//     return x * x * x;
+// }
+
+// console.log(calculate([1,2,3,4], square));
+// console.log(calculate([1,2,3,4], cube));
