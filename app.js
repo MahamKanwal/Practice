@@ -759,3 +759,174 @@
 
 // console.log(calculate([1,2,3,4], square));
 // console.log(calculate([1,2,3,4], cube));
+
+// function element(inputValue){
+//     var inputGet = document.getElementById("input").value
+//     inputGet +=  inputValue.innerText;
+//     document.getElementById("input").value = inputGet;
+//     }
+//     // RESULT 
+//     function result(equal){
+//         var inputGet = document.getElementById("input")
+//         inputGet.value = eval(inputGet.value)
+//     }
+ 
+//     // FOR AC 
+//     function clearOp(){
+//         var inputGet = document.getElementById("input")
+//         inputGet.value = ""
+//     }
+//     // FOR DELETE 
+//     function deleteOp(){
+//         var inputGet = document.getElementById("input")
+//         inputGet.value =inputGet.value.slice(0,-1);
+//     }
+//     // FOR NOT LETTING ANY OPERATOR BEING CLICKED MORE THAN ONCE 
+//     var lastOperator = '';
+    
+//     function operator(key) {
+//         var inputField = document.getElementById("input");
+//         var inputValue = inputField.value;
+//         var newOperator = key.innerText; //OPERATOR VALUE 
+    
+//         // Check if the last character is an operator
+//         if (inputValue.length > 0) {
+//             var lastChar = inputValue.charAt(inputValue.length - 1);
+    
+//             // valid operators
+//             var validOperators = ['+', '-', '*', '/', '%'];
+    
+//             if (validOperators.includes(lastChar)) {
+//                 // Replace the last operator with the new one
+//                 inputField.value = inputValue.slice(0, -1) + newOperator;
+//                 console.log("replace"+inputField.value)
+//             } else if (validOperators.includes(newOperator)) {
+//                 // Append the new operator if the last character is not an operator
+//                 inputField.value += newOperator;
+//             }
+            
+//             // Update the lastOperator to the new one
+//             lastOperator = newOperator;
+//             console.log(lastOperator)
+//         } else if (validOperators.includes(newOperator)) {
+//             // If input is empty and an operator is clicked, do nothing or handle as needed
+//             // For example, you could initialize the input with the operator if needed
+//             inputField.value = newOperator;
+//         }
+//     }
+
+// const fetchData = (callback) => {
+//     console.log("Fetching data...");
+
+// setTimeout(() => {
+//     console.log("Data fetched!");
+//     callback();
+// },1000);
+// }
+
+// const showData = () => {
+//     console.log("Displaying data...");
+// }
+// fetchData(showData);
+
+// const  getUser = (user) => {
+// const getPosts = (user, (posts) =>{
+//     const getComments = (posts, (comments) => {
+//         console.log(comments);
+//     });
+// });
+// };
+
+// getUser();
+// getPosts();
+// getComments();
+
+// getUser(function(user) {
+//   getPosts(user, function(posts) {
+//     getComments(posts, function(comments) {
+//       console.log(comments);
+//     });
+//   });
+// });
+
+// let age = 18;
+// let result = (age >= 18) ? "You can vote" : "You cannot vote";
+// console.log(result);
+
+// let score = 75;
+// let grade = score >= 80 ? "A" : score >= 60 ? "B" : "C";
+// console.log(grade);
+
+// const user = {
+//     name: "Maham",
+//     address: {
+//         city: "Karachi",
+//     },
+// };
+
+// console.log(user?.address?.city);
+// console.log(user?.contact?.phone);
+
+// const user = {
+//     name : "Maham",
+//     address: {
+//         city: "Karachi",
+//         zip: 75000
+//     }
+// };
+// console.log(user?.address?.city);
+// console.log(user?.address?.zip);
+// console.log(user?.address?.phone);
+// console.log(user?.address?.street);
+
+// const user = {
+//     greet() {
+//         return "Hello World";
+//     }
+// };
+// console.log(user.greet?.());
+// console.log(user.sayHi?.());
+
+// const users = [{ name: "Maham"}, null, {name: "Kanwal"}];
+// users.forEach(user => {
+//     console.log(user?.name);
+// });
+
+// const user = {};
+// console.log(user?.address?.city ?? "City not found");
+
+// const userFromAPI = {
+//     name: "Maham"
+// };
+// console.log(userFromAPI?.address?.city ?? "No city provided");
+
+// let i = 1;
+// while (i <= 5) {
+//     console.log("Number",i);
+//     i++;
+// }
+
+// let i = 1;
+// do{
+//     console.log("Count", i);
+//     i++;
+// } while(i <= 5);
+
+// let i = 6;
+// while (i <= 5){
+//     console.log("While:", i);
+//     i++;
+// }
+
+// do { 
+//     console.log("DoWhile", i);
+//     i++;
+// } while (i <= 5);
+
+
+
+
+
+
+
+
