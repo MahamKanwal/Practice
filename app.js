@@ -923,6 +923,29 @@
 //     i++;
 // } while (i <= 5);
 
+// IIFE
+// (()=>{
+//     console.log("This runs immediately!");
+// })();
+
+// (()=>{
+//     let message = "I'm private";
+//     console.log(message);
+// })();
+    
+// const user = (()=>{
+//     const name = "Maham";
+//     console.log("User initialized!");
+//     return {getname : () => name};
+// })();
+// console.log(user.getname());
+
+// ((name)=>{
+//     console.log(`Welcome, ${name}!`);
+// })("Maham");
+
+
+
 
 
 
