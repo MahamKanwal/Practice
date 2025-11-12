@@ -999,18 +999,18 @@
 //   });
 // });
 
-const obj = {
-    name: "ali",
-    age : 10,
-}
+// const obj = {
+//     name: "ali",
+//     age : 10,
+// }
 
-const keys = ["surname", "phoneNumber"];
-for (let key in keys){
-    obj[key] = "abc";
-}
+// const keys = ["surname", "phoneNumber"];
+// for (let key in keys){
+//     obj[key] = "abc";
+// }
 
-const fun = () => {}
+// const fun = () => {}
 
-const data = {...obj, fun};
+// const data = {...obj, fun};
 
-console.log(data);
+// console.log(data);
