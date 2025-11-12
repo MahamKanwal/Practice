@@ -186,7 +186,7 @@
 // }
 // console.log(`sum of first ${num} and natural number is ${sum}`)
 
-// Count vowels 
+// Count vowels
 // Ek string input lo aur count karo vowels (a, e, i, o, u) kitni hain.
 // User se prompt lo k wo koi word type kre phr wo jo word type kren usme se count kro kitni vowels he
 
@@ -249,7 +249,7 @@
 //   if(expiredQues[currentQuestionIdx]){
 //  timerElm.innerHTML = "Time Over";
 //  return;
-//   }   
+//   }
 //  timeLeft = quesTimers[currentQuestionIdx];
 //  timerElm.innerHTML = timeLeft;
 // timer = setInterval(() => {
@@ -283,20 +283,20 @@
 
 // class Student extends User {
 //   constructor(name, surname, school) {
-//     super(name, surname); 
+//     super(name, surname);
 //     this.school = school;
 //   }
 
 //   submitFees(fees) {
 //     console.log(`Fees submitted: ${fees}`);
 //   }
-// } 
+// }
 // class Employee extends User {
 //   constructor(name, surname, salary) {
-//     super(name, surname); 
+//     super(name, surname);
 //     this.salary = salary;
 //   }
-   
+
 //    jobResign(reason){
 //       console.log(reason)
 //    }
@@ -401,7 +401,7 @@
 //   }
 // });
 
-// pizzaPromise 
+// pizzaPromise
 // .then(msg => console.log(msg))
 // .catch(err => console.log(err));
 
@@ -443,7 +443,7 @@
 // }
 // checkPizza(true)
 // .then(msg => console.log(msg))
-// .catch(err => console.log(err));    
+// .catch(err => console.log(err));
 
 // const cutting = () => {
 //     return new Promise(resolve => {
@@ -610,7 +610,7 @@
 // const obj = {}
 // myMap.set(obj, "hello");
 // console.log(myMap.get(obj));
-// console.log(myMap.get({})); 
+// console.log(myMap.get({}));
 
 // const myMap = new Map();
 
@@ -680,7 +680,7 @@
 // console.log(items);
 
 // const nums = [4, 1, 10, 2];
-// nums.sort((a,b) => a-b); 
+// nums.sort((a,b) => a-b);
 // console.log(nums);
 
 // const words = ["Hello", "World"];
@@ -765,37 +765,37 @@
 //     inputGet +=  inputValue.innerText;
 //     document.getElementById("input").value = inputGet;
 //     }
-//     // RESULT 
+//     // RESULT
 //     function result(equal){
 //         var inputGet = document.getElementById("input")
 //         inputGet.value = eval(inputGet.value)
 //     }
- 
-//     // FOR AC 
+
+//     // FOR AC
 //     function clearOp(){
 //         var inputGet = document.getElementById("input")
 //         inputGet.value = ""
 //     }
-//     // FOR DELETE 
+//     // FOR DELETE
 //     function deleteOp(){
 //         var inputGet = document.getElementById("input")
 //         inputGet.value =inputGet.value.slice(0,-1);
 //     }
-//     // FOR NOT LETTING ANY OPERATOR BEING CLICKED MORE THAN ONCE 
+//     // FOR NOT LETTING ANY OPERATOR BEING CLICKED MORE THAN ONCE
 //     var lastOperator = '';
-    
+
 //     function operator(key) {
 //         var inputField = document.getElementById("input");
 //         var inputValue = inputField.value;
-//         var newOperator = key.innerText; //OPERATOR VALUE 
-    
+//         var newOperator = key.innerText; //OPERATOR VALUE
+
 //         // Check if the last character is an operator
 //         if (inputValue.length > 0) {
 //             var lastChar = inputValue.charAt(inputValue.length - 1);
-    
+
 //             // valid operators
 //             var validOperators = ['+', '-', '*', '/', '%'];
-    
+
 //             if (validOperators.includes(lastChar)) {
 //                 // Replace the last operator with the new one
 //                 inputField.value = inputValue.slice(0, -1) + newOperator;
@@ -804,7 +804,7 @@
 //                 // Append the new operator if the last character is not an operator
 //                 inputField.value += newOperator;
 //             }
-            
+
 //             // Update the lastOperator to the new one
 //             lastOperator = newOperator;
 //             console.log(lastOperator)
@@ -918,7 +918,7 @@
 //     i++;
 // }
 
-// do { 
+// do {
 //     console.log("DoWhile", i);
 //     i++;
 // } while (i <= 5);
@@ -932,7 +932,7 @@
 //     let message = "I'm private";
 //     console.log(message);
 // })();
-    
+
 // const user = (()=>{
 //     const name = "Maham";
 //     console.log("User initialized!");
@@ -944,12 +944,73 @@
 //     console.log(`Welcome, ${name}!`);
 // })("Maham");
 
+// const images = document.querySelectorAll(".main img");
+// const imgBox = document.querySelector(".img-box");
+// const img = document.getElementById("img");
+// const close = document.getElementById("close");
+// const next = document.querySelector(".next");
+// const prev = document.querySelector(".prev");
+// const filterButtons = document.querySelectorAll(".filter-btn");
 
+// let currentIndex = 0;
 
+// // Open image in modal
+// images.forEach((image, index) => {
+//   image.addEventListener("click", () => {
+//     imgBox.classList.remove("hidden");
+//     img.src = image.src;
+//     currentIndex = index;
+//   });
+// });
 
+// // Close modal
+// close.addEventListener("click", () => {
+//   imgBox.classList.add("hidden");
+// });
 
+// // Next image
+// next.addEventListener("click", () => {
+//   currentIndex = (currentIndex + 1) % images.length;
+//   img.src = images[currentIndex].src;
+// });
 
+// // Previous image
+// prev.addEventListener("click", () => {
+//   currentIndex = (currentIndex - 1 + images.length) % images.length;
+//   img.src = images[currentIndex].src;
+// });
 
+// // Filter functionality
+// filterButtons.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     document.querySelector(".active").classList.remove("active");
+//     btn.classList.add("active");
 
+//     const filter = btn.getAttribute("data-filter");
 
+//     images.forEach((image) => {
+//       const category = image.closest("div[data-category]").getAttribute("data-category");
+//       if (filter === "all" || category === filter) {
+//         image.closest("div[data-category]").style.display = "block";
+//       } else {
+//         image.closest("div[data-category]").style.display = "none";
+//       }
+//     });
+//   });
+// });
 
+const obj = {
+    name: "ali",
+    age : 10,
+}
+
+const keys = ["surname", "phoneNumber"];
+for (let key in keys){
+    obj[key] = "abc";
+}
+
+const fun = () => {}
+
+const data = {...obj, fun};
+
+console.log(data);
