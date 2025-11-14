@@ -1012,5 +1012,68 @@
 // const fun = () => {}
 
 // const data = {...obj, fun};
-
 // console.log(data);
+
+// let age = 18;
+// if (age >= 18){
+//     console.log("You are adult");    
+// } else{
+//     console.log("You are minor");
+// }
+
+// for (let i = 1; i <= 5; i++) {
+//     console.log(i);
+// }
+
+// let i = 1;
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
+
+// let i = 1;
+// do{
+//     console.log(i);
+//     i++;
+// } while (i <= 5);
+
+// const arr = [4,6,8];
+// const sum = arr.reduce((a, c) => a + c, 0);
+// const average = sum / arr.length;
+// console.log(average);
+
+// const temp = 30;
+// const temperatureString = `${temp}\u00B0C`;
+// console.log(temperatureString);
+
+// let a = 10;
+// let b = 20;
+// [a, b] = [b, a];
+// console.log(a,b);
+
+// const num1 = 10;
+// const num2 = 20;
+// const num3 = 30;
+// greatest number
+// if(num1 > num2 && num1 > num3){
+//     console.log("num1 is greatest", num1);
+// }
+// else if(num2 > num1 && num2 > num3){
+//     console.log("num2 is greatest", num2);
+// }
+// else{
+//     console.log("num3 is grestest", num3);
+// }
+
+// smallest
+// if(num1 < num2 && num1 < num3){
+//     console.log("num1 is smallest",num1);
+// }
+// else if (num2 < num1 && num2 < num3){
+//    console.log("num2 is smallest", num2);
+// }
+// else{
+//     console.log("num3 is smallest");
+// }
+
+
