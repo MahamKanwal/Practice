@@ -1076,4 +1076,56 @@
 //     console.log("num3 is smallest");
 // }
 
+// for (let i = 1; i <= 10; i++){
+//     console.log(i);
+// }
 
+// const num = +(prompt("Enter a number"));
+// if (num % 2 === 0){
+//     console.log("Even")
+// }
+// else {
+//     console.log("Odd");
+// }
+
+// let sum = 0;
+
+// for (let i = 1; i <= 100; i++){
+//     sum += i;
+// }
+// console.log("Sum:", sum);
+
+// let arr = [2,4,6,8,10];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++){
+//     sum += arr[i];
+// }
+// for (let value of arr){
+//     sum += value;
+// }
+// let sum = arr.reduce((total, num) => total + num, 0);
+// console.log("Sum:", sum);
+
+
+// let arr = [2,4,6,8,10];
+// let max = Math.max(...arr);
+// let min = Math.min(...arr);
+// console.log("Max:", max);
+// console.log("Min:", min);
+
+// let arr = [2, 4, 6, 8, 10];
+
+// let max = arr[0];
+// let min = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//         max = arr[i];
+//     }
+//     if (arr[i] < min) {
+//         min = arr[i];
+//     }
+// }
+
+// console.log("Max:", max);
+// console.log("Min:", min);
